@@ -8,3 +8,4 @@ actor Main is TestList
 
   fun tag tests(test: PonyTest) =>
     test(Day01Step01("../data/day_01.txt"))
+    test(Day01Step02("../data/day_01.txt"))

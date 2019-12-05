@@ -18,7 +18,9 @@ class iso Day01Step02 is UnitTest
       (fuel + f, true)
     })
 
-    h.assert_eq[I64](4856390, total_fuel)
+    let expected: I64 = 4856390
+    h.env.out.print(name() + ": " + expected.string())
+    h.assert_eq[I64](expected, total_fuel)
 
   fun get_fuel(mass: I64): I64 =>
     if mass > 0 then

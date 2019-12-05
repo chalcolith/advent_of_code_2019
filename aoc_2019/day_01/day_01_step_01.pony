@@ -20,4 +20,6 @@ class iso Day01Step01 is UnitTest
       end
     })
 
-    h.assert_eq[I64](3239503, total_fuel)
+    let expected: I64 = 3239503
+    h.env.out.print(name() + ": " + expected.string())
+    h.assert_eq[I64](expected, total_fuel)

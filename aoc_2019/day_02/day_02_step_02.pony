@@ -25,9 +25,12 @@ class iso Day02Step02 is UnitTest
     end
 
   fun find_noun_verb(h: TestHelper, core: Array[I64]): (I64, I64)? =>
+    let input = Array[I64]
+    let output = Array[I64]
+
     for noun in Range[I64](0, 100) do
       for verb in Range[I64](0, 100) do
-        var machine = IntcodeMachine(core.clone())
+        var machine = IntcodeMachine(core.clone(), input.values(), output)
         machine.memory(1)? = noun
         machine.memory(2)? = verb
         match machine.run()

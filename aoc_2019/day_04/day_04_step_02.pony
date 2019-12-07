@@ -23,7 +23,7 @@ class iso Day04Step02 is UnitTest
       if PasswdValid2(n) then total + 1 else total end
     })
 
-    let expected: USize = 1169
+    let expected: USize = 757
     h.env.out.print(name() + ": " + expected.string())
     h.assert_eq[USize](expected, num_valid)
 
